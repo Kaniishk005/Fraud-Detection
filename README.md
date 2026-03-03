@@ -32,4 +32,20 @@ Endpoint	Method	Description
 -Uvicorn
 -Pandas / NumPy
 
+6. Sample Request
+{
+  "step": 1,
+  "type": "TRANSFER",
+  "amount": 1000000,
+  "oldbalanceOrg": 1000000,
+  "newbalanceOrig": 0,
+  "oldbalanceDest": 0,
+  "newbalanceDest": 0
+}
 
+7. Live API:
+https://fraud-detection-69j6.onrender.com/docs- Deployed on Render using Uvicorn ASGI server.
+
+## Architecture
+
+Client → FastAPI → Preprocessing → RandomForest Model → Probability Scoring → Threshold Logic → Response
